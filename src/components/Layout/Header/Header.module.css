@@ -1,0 +1,7 @@
+.goBackArrow {
+  cursor: pointer;
+}
+
+.goBackArrow:hover {
+  opacity: 0.75;
+}

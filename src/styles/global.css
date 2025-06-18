@@ -1,0 +1,73 @@
+.hideForMobile {
+  display: none;
+}
+
+html,
+body {
+  background-color: #1a1818;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.contentWrapper {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contentColumns {
+  grid-column: 2 / 7;
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #333;
+  padding: 2rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Large screens only */
+
+@media only screen and (min-width: 1280px) {
+  .contentWrapper {
+    max-width: 72rem;
+    padding: 0 5rem;
+  }
+
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .contentColumns {
+    grid-column: span 2;
+  }
+
+  .hideForDesktop {
+    display: none;
+  }
+
+  .hideForMobile {
+    display: flex;
+  }
+}
