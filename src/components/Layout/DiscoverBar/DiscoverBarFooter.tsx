@@ -27,14 +27,14 @@ export const DiscoverBarFooter = () => {
   return (
     <DiscoverbarFooterWrapper>
       {footerLinks.map((link, index) => (
-        <>
-          <Link href={link.href} key={link.id} size="small" secondary underline>
+        <React.Fragment key={link.id}>
+          <Link href={link.href} size="small" secondary underline>
             {link.title}
           </Link>
           {index !== footerLinks.length - 1 && (
             <DiscoverbarFooterLinksDot> &bull; </DiscoverbarFooterLinksDot>
           )}
-        </>
+        </React.Fragment>
       ))}
     </DiscoverbarFooterWrapper>
   );

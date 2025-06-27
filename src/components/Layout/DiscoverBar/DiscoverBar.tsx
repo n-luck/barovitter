@@ -14,7 +14,6 @@ import {
   UserInfo,
   UserWrapper,
 } from "./DiscoverBar.style";
-import { FaCheck } from "react-icons/fa";
 import { DiscoverBarFooter } from "./DiscoverBarFooter";
 import { LoadingCircle } from "@/components/UI/LoadingCircle";
 import { LinkItem as Link } from "@/components/UI/Link";
@@ -53,27 +52,6 @@ export const DiscoverBar = () => {
           </FollowWrapper>
         </Suspense>
       </ErrorBoundary>
-      <DiscoverbarLine />
-      <div>
-        <h3>To do:</h3>
-        <ul>
-          <li>Global Styles</li>
-          <li>Write Tests</li>
-          <li>Clean up styles</li>
-          <li>Add Storybook stories</li>
-          <li>
-            New Post Modal <FaCheck />
-          </li>
-          <li>Discoverbar content</li>
-          <li>User can delete post</li>
-          <li>update toast messages to be specific</li>
-          <li>Infinite scroll</li>
-          <li>Following & Discover tabs</li>
-          <li>Chat</li>
-          <li>Integrate whack a strahd</li>
-          <li>Comment: Hide/Expand form</li>
-        </ul>
-      </div>
       <DiscoverbarLine />
       <DiscoverBarFooter />
     </DiscoverbarWrapper>

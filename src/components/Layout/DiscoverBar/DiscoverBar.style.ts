@@ -1,5 +1,3 @@
-// TO DO: GLOBAL STYLE display: flex; gap: 1rem
-
 import { device, globalColors } from "@/theme/globalStyles";
 import styled from "styled-components";
 
