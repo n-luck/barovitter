@@ -17,7 +17,7 @@ export const Default: Story = {
           const color = globalColors[key] || "#FFFFFF";
           return (
             <div key={key} style={styles.colorWrapper}>
-              <p>{`globalColors.${key}:`}</p>
+              <p style={{ color: "white" }}>{`globalColors.${key}:`}</p>
               <div style={{ ...styles.color, backgroundColor: color }}>
                 <span
                   style={
