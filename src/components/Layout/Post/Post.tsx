@@ -15,7 +15,7 @@ interface PostProps {
   postId: string;
 }
 
-export const Post = ({ postId }: PostProps) => {
+const Post = ({ postId }: PostProps) => {
   const { data: fetchedPost, isLoading } = usePost(postId as string);
 
   if (isLoading || !fetchedPost) {
@@ -44,3 +44,5 @@ export const Post = ({ postId }: PostProps) => {
     </>
   );
 };
+
+export default Post

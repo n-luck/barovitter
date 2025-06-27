@@ -3,7 +3,7 @@ import prisma from "../../../../../lib/prismadb";
 
 export async function GET(
   req: Request,
-  { params }: { params: { userId: string } },
+  { params }: { params: Promise<{ userId: string }> },
 ) {
   try {
     const { userId } = await params;
@@ -31,7 +31,10 @@ export async function GET(
       { status: 200 },
     );
   } catch (error) {
-    console.log(error);
-    NextResponse.json({ message: "Error fetching user." }, { status: 400 });
+    console.error(error);
+    return NextResponse.json(
+      { message: "Error fetching user." },
+      { status: 400 },
+    );
   }
 }
