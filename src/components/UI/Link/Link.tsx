@@ -10,6 +10,7 @@ interface LinkProps {
   tertiary?: boolean;
   underline?: boolean;
   style?: CSSProperties;
+  target?: string;
 }
 
 export const LinkItem = ({
@@ -20,9 +21,10 @@ export const LinkItem = ({
   tertiary,
   underline,
   style,
+  target = "_self",
 }: LinkProps) => {
   return (
-    <Link href={href} style={{ textDecoration: "none" }}>
+    <Link href={href} style={{ textDecoration: "none" }} target={target}>
       <LinkWrapper
         $size={size}
         $secondary={secondary}
