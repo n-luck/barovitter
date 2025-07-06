@@ -88,7 +88,7 @@ export const Form = ({ placeholder, isComment, postId }: FormProps) => {
         </FormLoggedIn>
       ) : (
         <FormLoggedOut>
-          <FormHeadline>Welcome to Barovitter</FormHeadline>
+          {!isComment && <FormHeadline>Welcome to Barovitter</FormHeadline>}
           <FormControls>
             <Button onClick={loginModal.onOpen}>Login</Button>
             <ButtonSecondary onClick={registerModal.onOpen}>
